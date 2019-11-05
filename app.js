@@ -2,7 +2,7 @@ const express = require('express');
 
 var app = express();
 const hostname = "127.0.0.1";
-const port = 8000;
+const port = process.env.PORT;
 
 const indexRoute = require('./routes/index.js');
 
