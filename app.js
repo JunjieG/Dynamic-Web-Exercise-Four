@@ -6,8 +6,10 @@ const hostname = "127.0.0.1";
 const port = process.env.PORT || 8080;
 
 const indexRoute = require('./routes/index.js');
+const postRoute = require('./routes/post.js');
 
 app.use('/', indexRoute);
+app.use('/post', postRoute);
 
 app.use(express.static('public'));
 

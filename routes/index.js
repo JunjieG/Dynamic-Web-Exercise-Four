@@ -44,7 +44,7 @@ router.get('/', function (req, res) {
 })
 
 // Getting specific articles
-router.get('/:id', function (req, res) {
+router.get('/article/:id', function (req, res) {
   let blogRef = db.collection('blog-posts').doc(req.params.id);
   let getDoc = blogRef.get()
     .then(doc => {
