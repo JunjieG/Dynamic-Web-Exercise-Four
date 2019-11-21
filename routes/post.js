@@ -26,24 +26,10 @@ if (!firebase.apps.length) {
 
 var db = firebase.firestore();
 
-var form = `<form action="/post/submitted" id="new_article" method="post">
-              <label for="author_name">Author Name: </label>
-              <input id="author_name" type="text" name="author">
-              <br>
-              <label for="title">Title: </label>
-              <input id="title" type="text" name="title">
-              <br>
-              <label for="content">Content: </label>
-              <textarea rows="4" cols="50" name="content" form="new_article">
-              </textarea>
-              <br>
-              <input type="submit" value="OK">
-            </form>`
-
 
 router.get('/', function (req, res) {
-  res.send(
-    form
+  res.sendFile(
+    __dirname + '/post.html'
   )
 })
 
